@@ -1,0 +1,230 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TownLights
+import Combine
+import CoreBluetooth
+import Foundation
+import Foundation.NSDate
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+@_Concurrency.MainActor(unsafe) public struct AppDefaultModifier : SwiftUI.ViewModifier {
+  @_Concurrency.MainActor(unsafe) public init()
+  @_Concurrency.MainActor(unsafe) public func body(content: TownLights.AppDefaultModifier.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10TownLights18AppDefaultModifierV4body7contentQr7SwiftUI05_ViewE8_ContentVyACG_tF", 0) __
+}
+extension SwiftUI.View {
+  @inlinable public func then(_ body: (inout Self) -> Swift.Void) -> Self {
+        var result = self
+        
+        body(&result)
+        
+        return result
+    }
+  @inlinable public func eraseToAnyView() -> SwiftUI.AnyView {
+        return .init(self)
+    }
+}
+extension SwiftUI.View {
+  @inlinable public func reverseMask<Mask>(alignment: SwiftUI.Alignment = .center, @SwiftUI.ViewBuilder _ mask: () -> Mask) -> some SwiftUI.View where Mask : SwiftUI.View {
+        self.mask {
+            Rectangle()
+                .overlay(alignment: alignment) {
+                    mask()
+                        .blendMode(.destinationOut)
+                }
+        }
+    }
+  
+}
+@_Concurrency.MainActor(unsafe) public struct TownLightsView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init()
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10TownLights0aB4ViewV4bodyQrvp", 0) __
+}
+public struct AnyButtonStyle : SwiftUI.ButtonStyle {
+  public init<S>(_ style: S) where S : SwiftUI.ButtonStyle
+  public func makeBody(configuration: TownLights.AnyButtonStyle.Configuration) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10TownLights14AnyButtonStyleV8makeBody13configurationQr7SwiftUI0dE13ConfigurationV_tF", 0) __
+}
+public struct AnyViewModifier : SwiftUI.ViewModifier {
+  public init<T>(_ modifier: T) where T : SwiftUI.ViewModifier
+  public init<Body>(@SwiftUI.ViewBuilder _ makeBody: @escaping (TownLights.AnyViewModifier.Content) -> Body) where Body : SwiftUI.View
+  @_Concurrency.MainActor(unsafe) public func body(content: TownLights.AnyViewModifier.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10TownLights15AnyViewModifierV4body7contentQr7SwiftUI01_dE8_ContentVyACG_tF", 0) __
+}
+public struct ColorPickerRing : SwiftUI.View {
+  public var color: SwiftUI.Binding<TownLights.DynamicColor>
+  public var strokeWidth: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public init(color: SwiftUI.Binding<TownLights.DynamicColor>, strokeWidth: CoreGraphics.CGFloat)
+  public typealias Body = @_opaqueReturnTypeOf("$s10TownLights15ColorPickerRingV4bodyQrvp", 0) __
+}
+public struct ColorWheel : SwiftUI.View {
+  public var color: SwiftUI.Binding<TownLights.DynamicColor>
+  public var frame: CoreGraphics.CGRect
+  public var strokeWidth: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public init(color: SwiftUI.Binding<TownLights.DynamicColor>, frame: CoreGraphics.CGRect, strokeWidth: CoreGraphics.CGFloat)
+  public typealias Body = @_opaqueReturnTypeOf("$s10TownLights10ColorWheelV4bodyQrvp", 0) __
+}
+extension Swift.Array where Element : UIKit.UIColor {
+  public var gradient: TownLights.DynamicGradient {
+    get
+  }
+}
+extension UIKit.UIColor {
+  public enum ContrastDisplayContext {
+    case standard
+    case standardLargeText
+    case enhanced
+    case enhancedLargeText
+    public static func == (a: UIKit.UIColor.ContrastDisplayContext, b: UIKit.UIColor.ContrastDisplayContext) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension UIKit.UIColor {
+  final public func adjustedHue(amount: CoreGraphics.CGFloat) -> TownLights.DynamicColor
+  final public func complemented() -> TownLights.DynamicColor
+  final public func lighter(amount: CoreGraphics.CGFloat = 0.2) -> TownLights.DynamicColor
+  final public func darkened(amount: CoreGraphics.CGFloat = 0.2) -> TownLights.DynamicColor
+  final public func saturated(amount: CoreGraphics.CGFloat = 0.2) -> TownLights.DynamicColor
+  final public func desaturated(amount: CoreGraphics.CGFloat = 0.2) -> TownLights.DynamicColor
+  final public func grayscaled(mode: TownLights.GrayscalingMode = .lightness) -> TownLights.DynamicColor
+  final public func inverted() -> TownLights.DynamicColor
+}
+extension UIKit.UIColor {
+  final public func toHSBComponents() -> (h: CoreGraphics.CGFloat, s: CoreGraphics.CGFloat, b: CoreGraphics.CGFloat)
+  final public var hueComponent: CoreGraphics.CGFloat {
+    get
+  }
+  final public var saturationComponent: CoreGraphics.CGFloat {
+    get
+  }
+  final public var brightnessComponent: CoreGraphics.CGFloat {
+    get
+  }
+}
+extension UIKit.UIColor {
+  convenience public init(hue: CoreGraphics.CGFloat, saturation: CoreGraphics.CGFloat, lightness: CoreGraphics.CGFloat, alpha: CoreGraphics.CGFloat = 1)
+  final public func toHSLComponents() -> (h: CoreGraphics.CGFloat, s: CoreGraphics.CGFloat, l: CoreGraphics.CGFloat)
+}
+extension UIKit.UIColor {
+  convenience public init(L: CoreGraphics.CGFloat, a: CoreGraphics.CGFloat, b: CoreGraphics.CGFloat, alpha: CoreGraphics.CGFloat = 1)
+  final public func toLabComponents() -> (L: CoreGraphics.CGFloat, a: CoreGraphics.CGFloat, b: CoreGraphics.CGFloat)
+}
+extension UIKit.UIColor {
+  final public func mixed(withColor color: TownLights.DynamicColor, weight: CoreGraphics.CGFloat = 0.5, inColorSpace colorspace: TownLights.DynamicColorSpace = .rgb) -> TownLights.DynamicColor
+  final public func tinted(amount: CoreGraphics.CGFloat = 0.2) -> TownLights.DynamicColor
+  final public func shaded(amount: CoreGraphics.CGFloat = 0.2) -> TownLights.DynamicColor
+  public func mixedLab(withColor color: TownLights.DynamicColor, weight: CoreGraphics.CGFloat) -> TownLights.DynamicColor
+  public func mixedHSL(withColor color: TownLights.DynamicColor, weight: CoreGraphics.CGFloat) -> TownLights.DynamicColor
+  public func mixedHSB(withColor color: TownLights.DynamicColor, weight: CoreGraphics.CGFloat) -> TownLights.DynamicColor
+  public func mixedRGB(withColor color: TownLights.DynamicColor, weight: CoreGraphics.CGFloat) -> TownLights.DynamicColor
+  public func mixedHue(source: CoreGraphics.CGFloat, target: CoreGraphics.CGFloat) -> CoreGraphics.CGFloat
+}
+extension UIKit.UIColor {
+  convenience public init(r: CoreGraphics.CGFloat, g: CoreGraphics.CGFloat, b: CoreGraphics.CGFloat, a: CoreGraphics.CGFloat = 255)
+  final public func toRGBAComponents() -> (r: CoreGraphics.CGFloat, g: CoreGraphics.CGFloat, b: CoreGraphics.CGFloat, a: CoreGraphics.CGFloat)
+  final public var redComponent: CoreGraphics.CGFloat {
+    get
+  }
+  final public var greenComponent: CoreGraphics.CGFloat {
+    get
+  }
+  final public var blueComponent: CoreGraphics.CGFloat {
+    get
+  }
+  final public var alphaComponent: CoreGraphics.CGFloat {
+    get
+  }
+  final public func adjustedAlpha(amount: CoreGraphics.CGFloat) -> TownLights.DynamicColor
+}
+extension UIKit.UIColor {
+  convenience public init(X: CoreGraphics.CGFloat, Y: CoreGraphics.CGFloat, Z: CoreGraphics.CGFloat, alpha: CoreGraphics.CGFloat = 1)
+  final public func toXYZComponents() -> (X: CoreGraphics.CGFloat, Y: CoreGraphics.CGFloat, Z: CoreGraphics.CGFloat)
+}
+public typealias DynamicColor = UIKit.UIColor
+extension UIKit.UIColor {
+  convenience public init(hexString: Swift.String)
+  convenience public init(hex: Swift.UInt64, useAlpha alphaChannel: Swift.Bool = false)
+  final public func toHexString() -> Swift.String
+  final public func toHex() -> Swift.UInt32
+  public func toRGBA() -> Swift.UInt32
+  public func toAGBR() -> Swift.UInt32
+  public func isEqual(toHexString hexString: Swift.String) -> Swift.Bool
+  public func isEqual(toHex hex: Swift.UInt32) -> Swift.Bool
+  public func isLight() -> Swift.Bool
+  public var luminance: CoreGraphics.CGFloat {
+    get
+  }
+  public func contrastRatio(with otherColor: TownLights.DynamicColor) -> CoreGraphics.CGFloat
+  public func isContrasting(with otherColor: TownLights.DynamicColor, inContext context: UIKit.UIColor.ContrastDisplayContext = .standard) -> Swift.Bool
+}
+final public class DynamicGradient {
+  public init(colors: [TownLights.DynamicColor])
+  final public func colorPalette(amount: Swift.UInt = 2, inColorSpace colorspace: TownLights.DynamicColorSpace = .rgb) -> [TownLights.DynamicColor]
+  final public func pickColorAt(scale: CoreGraphics.CGFloat, inColorSpace colorspace: TownLights.DynamicColorSpace = .rgb) -> TownLights.DynamicColor
+  @objc deinit
+}
+public enum DynamicColorSpace {
+  case rgb
+  case hsl
+  case hsb
+  case lab
+  public static func == (a: TownLights.DynamicColorSpace, b: TownLights.DynamicColorSpace) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum GrayscalingMode {
+  case luminance
+  case lightness
+  case average
+  case value
+  public static func == (a: TownLights.GrayscalingMode, b: TownLights.GrayscalingMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+extension SwiftUI.Color {
+  public init(hexString: Swift.String)
+  public init(hex: Swift.UInt64, useOpacity opacityChannel: Swift.Bool = false)
+}
+@_Concurrency.MainActor(unsafe) public struct AdaptiveTabView<Content, SelectionValue> : SwiftUI.View where Content : SwiftUI.View, SelectionValue : Swift.Hashable {
+  @_Concurrency.MainActor(unsafe) public init(selection: SwiftUI.Binding<SelectionValue>?, @SwiftUI.ViewBuilder content: @escaping () -> Content)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10TownLights15AdaptiveTabViewV4bodyQrvp", 0) __<Content, SelectionValue>
+}
+extension TownLights.AdaptiveTabView where SelectionValue == Swift.Int {
+  @_Concurrency.MainActor(unsafe) public init(@SwiftUI.ViewBuilder content: @escaping () -> Content)
+}
+
+#if compiler(>=5.3) && $AsyncAwait && $Sendable
+public func asyncWithTimeout<R>(seconds: Foundation.TimeInterval, operation: @escaping @Sendable () async throws -> R) async throws -> R
+#endif
+
+extension UIKit.UIColor.ContrastDisplayContext : Swift.Equatable {}
+extension UIKit.UIColor.ContrastDisplayContext : Swift.Hashable {}
+extension TownLights.DynamicColorSpace : Swift.Equatable {}
+extension TownLights.DynamicColorSpace : Swift.Hashable {}
+extension TownLights.GrayscalingMode : Swift.Equatable {}
+extension TownLights.GrayscalingMode : Swift.Hashable {}

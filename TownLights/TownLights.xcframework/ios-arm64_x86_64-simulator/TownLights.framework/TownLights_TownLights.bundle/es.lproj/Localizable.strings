@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  TownLights
+
+  Created by P1000011 on 7/6/22.
+  
+*/
+
+"LightstickList.Title" = "¡Hola! :)";
+"LightstickList.Subtitle" = "Elige el artista de tu lightstick para conectarlo con la aplicación";
+"LightstickList.CTA" = "CONTINUAR";
+"Dashboard.PickAColor" = "Elige un color";
+"Discovery.Searching"="Buscando...";
+"Discovery.Intructions" = "Por favor habilita el Modo Bluetooth en tu lightstick para enlazarlo con la aplicación.";
+"Discovery.Error.Title" = "Error";
+"Discovery.Error.Message" = "Por favor asegurese que el Bluetooth este habilitado para esta aplicación y que el lightstick este en Modo Bluetooth.";
+"Dashboard.ColorRing.Instructions" = "Elige un color para cambiar la luz de tu lightstick.";
+"Dashboard.Effects.Speed" = "Velocidad";
+"Dashboard.Effects.Slow" = "Lento";
+"Dashboard.Effects.Fast" = "Rápido";
+"Dashboard.Effects.Type" = "Tipo";
+"Dashboard.Features.Color" = " Color";
+"Dashboard.Features.Effects" = "Efectos ";
+"Dashboard.Effects.Empty" = "Este lightstick no posee efectos.";
+"Discovery.Error.Retry" = "Reiniciar";
+"Discovery.Error.Cancel" = "Cancelar";
+"Author" = "Desarrollo por P1000011";

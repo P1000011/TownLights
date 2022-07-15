@@ -1,0 +1,31 @@
+[
+    {
+        "artist": "SHINee",
+        "primaryColor": "79E5CB",
+        "secondaryColor": "FFFFFF",
+        "deviceLocalName": "SHINee_OFL_V1",
+        "deviceType": 0
+    },
+    {
+        "artist": "SuperM",
+        "primaryColor": "000000",
+        "secondaryColor": "ffffff",
+        "deviceLocalName": "SuperM_OFL_V1",
+        "deviceType": 0
+    },
+    {
+        "artist": "EXO",
+        "primaryColor": "000000",
+        "secondaryColor": "FFF8E7",
+        "deviceLocalName": "EXO_FANLIGHT",
+        "deviceType": 1
+    },
+    {
+        "artist": "Super Junior",
+        "primaryColor": "00239b",
+        "secondaryColor": "FFFFFF",
+        "deviceLocalName": "SJ_OFL_V2",
+        "deviceType": 1
+    }
+]
+

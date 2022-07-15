@@ -1,0 +1,62 @@
+[
+    {
+        "colors": ["799F0C", "FFE000"],
+        "name": "Strobe",
+        "command": "02",
+        "speed": 0
+    },
+    {
+        "colors": ["ED4264", "FFEDBC"],
+        "name": "Dimming",
+        "command": "03",
+        "speed": 0
+    },
+    {
+        "colors": ["085078", "85D8CE"],
+        "name": "Flash",
+        "command": "06",
+        "speed": 0
+    },
+    {
+        "colors": ["40E0D0", "FF69B4","FFFF66"],
+        "name": "Rainbow",
+        "command": "14",
+        "speed": 0
+    },
+    {
+        "colors": ["FFFF66", "FF69B4", "40E0D0"],
+        "name": "Rainbow Trace",
+        "command": "16",
+        "speed": 1
+    },
+    {
+        "colors": ["514A9D", "FBD3E9"],
+        "name": "Color Trace",
+        "command": "20",
+        "speed": 1
+    },
+    {
+        "colors": ["BB377D", "FBD3E9"],
+        "name": "All Segments",
+        "command": "21",
+        "speed": 1
+    },
+    {
+        "colors": ["24C6DC", "BB377D", "FBD3E9"],
+        "name": "Segment 1",
+        "command": "22",
+        "speed": 1
+    },
+    {
+        "colors": ["FBD3E9", "24C6DC", "BB377D"],
+        "name": "Segment 2",
+        "command": "23",
+        "speed": 1
+    },
+    {
+        "colors": ["FBD3E9", "BB377D", "24C6DC"],
+        "name": "Segment 3",
+        "command": "24",
+        "speed": 1
+    }
+]
